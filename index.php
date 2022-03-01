@@ -51,7 +51,7 @@ function end_duration($start , $duration){
                         //CONTROLLO SU TUTTE LE SALE
                         
                         if($film[day] == $search_day){
-               //(bonus.7)  $film_list_forDay[] = [$film , $proiezione[sala]->id];
+               /*(bonus.7)*/$film_list_forDay[] = [$film , $proiezione[sala]->id];
                             if($last_film == null)
                                 $last_film = $film;
                             else
