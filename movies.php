@@ -3,10 +3,12 @@
 class Movie{
     public $name;
     public $actors = [];
+    public $duration;
 
-    public function __construct($_name, $_actors){
+    public function __construct($_name, $_actors, $_duration){
         $this->name = $_name; 
         $this->actors = $_actors; 
+        $this->duration = $_duration; 
     }
 
     public function getMovie(){
