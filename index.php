@@ -80,14 +80,19 @@ function end_duration($start , $duration){
             echo "l'ultimo spettacolo del giorno: {$search_day} è : <br>"
             .$last_film[movie]->getMovie()
             ."<br> alle ore : {$last_film[start]} <br>"
-            ."e termina alle : "
-            .end_duration($last_film[start] , $last_film[movie]->duration)
-            ."<br> <br>";
+            ."e termina alle : ";
+            try{
+                echo end_duration($last_film[start] , $last_film[movie]->duration);
+            } catch(Exception $e){
+                echo "Eccezione".$e->getMessage;
+            }
+            
+            echo "<br> <br>";
 
             echo "il giorno: {$search_day} avrà i seguenti spettacoli : <br>";
             echo "<ul>";
             foreach($film_list_forDay as $film){
-                echo "<li>".$film[0][movie]->getMovie()
+                echo "<li>".$film[0][movie]->getMovieLessName()
                 ."<br> alle ore : {$film[0][start]}"
                 ." --- sala : {$film[1]} <br><br>"
                 ."</li>";

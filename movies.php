@@ -14,14 +14,24 @@ class Movie{
     public function getMovie(){
         return 
             "{$this->name} , 
-            actors : ({$this->getActors()})
+            actors : ({$this->getActors('all')})
         ";
     }
 
-    public function getActors(){
+    public function getMovieLessName(){
+        return 
+            "{$this->name} , 
+            actors : ({$this->getActors('less')})
+        ";
+    }
+
+    public function getActors($type){
         $actors_str = "";
-        foreach($this->actors as $actor){
-            $actors_str .= " {$actor}";
+        foreach($this->actors as $actor){ 
+            if($type == 'less')
+                $actors_str .= strtok($actor, " ")[0]. "." .strstr($actor," ") . " ";
+            else
+                $actors_str .= $actor . " ";
         }
         return  $actors_str;
     }

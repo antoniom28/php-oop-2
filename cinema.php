@@ -1,9 +1,9 @@
 <?php
 
 $all_movies = [
-    new Movie('spiderman' , ['Tobey Maguire, Kirsten Dunst','Willem Dafoe'], 120),
-    new Movie('Inception' , ['Leonardo DiCaprio, Cillian Murphy','Tom Hardy'], 150),
-    new Movie('Annabelle' , ['Annabelle Wallis, Ward Horton'], 120),
+    new Movie('spiderman' , ['Tobey Maguire', 'Kirsten Dunst','Willem Dafoe'], 120),
+    new Movie('Inception' , ['Leonardo DiCaprio', 'Cillian Murphy','Tom Hardy'], 150),
+    new Movie('Annabelle' , ['Annabelle Wallis', 'Ward Horton'], 120),
 ];
 
 $cinema = [
